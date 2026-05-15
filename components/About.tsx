@@ -23,35 +23,34 @@ export default function WhatWeDo() {
   return (
     <section
       style={{
-        background: "white",
-        borderTop: "10px solid #213d1f",
-        padding: "30px 0",
-        height: "700px",
+        background: "#ffffff",
+        borderTop: "8px solid #213d1f",
+        padding: "60px 0",
+        position: "relative",
       }}
     >
       <div className="container">
-
-        {/* Heading */}
+        {/* Heading Section */}
         <div className="row justify-content-end mb-5">
-          <div className="col-lg-7">
-            <h1 
+          <div className="col-12 col-md-10 col-lg-7 text-start text-md-end">
+            <h1
+              className="display-4"
               style={{
-                fontSize: "50px",
                 fontWeight: "900",
-                lineHeight: "50px",
                 color: "#213d1f",
-            
+                letterSpacing: "-1px",
               }}
             >
               WHAT WE DO
             </h1>
-
             <p
               style={{
-                fontSize: "25px",
-                fontWeight: "600",
-                color: "#213d1f",
+                fontSize: "18px",
+                fontWeight: "700",
+                color: "#e65100", // Soft vibrant accent contrast to the dark green
                 textTransform: "uppercase",
+                letterSpacing: "2px",
+                marginTop: "5px",
               }}
             >
               OUR PILLARS OF SUPPORT
@@ -59,18 +58,22 @@ export default function WhatWeDo() {
           </div>
         </div>
 
-        {/* Content */}
+        {/* Content Pillars */}
         {pillars.map((item, index) => (
-          <div className="row mb-2 pb-2" key={index}>
-            
-            {/* Left Side */}
-            <div className="col-lg-3 mb-2 mb-lg-0">
+          <div 
+            className="row align-items-start py-4 my-3" 
+            key={index}
+            style={{
+              borderBottom: index !== pillars.length - 1 ? "1px solid #f0f2f0" : "none"
+            }}
+          >
+            {/* Left Side (Title) */}
+            <div className="col-12 col-lg-3 mb-3 mb-lg-0">
               <h2
+                className="pillar-title"
                 style={{
                   whiteSpace: "pre-line",
-                  fontSize: "40px",
-                  lineHeight: "56px",
-                  fontWeight: "600",
+                  fontWeight: "800",
                   color: "#213d1f",
                 }}
               >
@@ -78,30 +81,42 @@ export default function WhatWeDo() {
               </h2>
             </div>
 
-            {/* Right Side */}
-            <div className="col-lg-9">
+            {/* Right Side (Details & Action Callout) */}
+            <div className="col-12 col-lg-9">
               <p
                 style={{
                   fontSize: "16px",
-                //   lineHeight: "40px",
-                  color: "#1d1d1d",
-                  fontWeight: "500",
+                  lineHeight: "1.7",
+                  color: "#333333",
+                  fontWeight: "400",
+                  textAlign: "justify"
                 }}
               >
                 {item.desc}
               </p>
 
-              <h5
+              {/* Enhanced Action Card */}
+              <div
                 style={{
-                  marginTop: "15px",
-                  fontSize: "20px",
-                  lineHeight: "20px",
-                  color: "#010101",
-                  fontWeight: "600",
+                  marginTop: "20px",
+                  padding: "18px 24px",
+                  backgroundColor: "#f4f7f4",
+                  borderLeft: "4px solid #213d1f",
+                  borderRadius: "4px 8px 8px 4px",
                 }}
               >
-                {item.action}
-              </h5>
+                <h5
+                  style={{
+                    fontSize: "15px",
+                    lineHeight: "1.5",
+                    color: "#1a2e19",
+                    fontWeight: "600",
+                    margin: 0,
+                  }}
+                >
+                  {item.action}
+                </h5>
+              </div>
             </div>
           </div>
         ))}

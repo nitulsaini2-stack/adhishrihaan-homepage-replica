@@ -1,6 +1,4 @@
- /* navbar styles */
-
-
+/* navbar styles */
 .nav-custom {
   color: white !important;
   font-size: 13px;
@@ -16,6 +14,7 @@
 .nav-custom:active {
   color: white !important;
 }
+
 .logo-link {
   padding: 8px 14px;
   border-radius: 999px;
@@ -27,15 +26,24 @@
 }
 
 .navbar-custom {
-  
-
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
 
+/* New Responsive Pillar Typography Support */
+.pillar-title {
+  font-size: 28px;
+  line-height: 1.2;
+}
 
-/* slider */
+@media (min-width: 992px) {
+  .pillar-title {
+    font-size: 38px;
+    line-height: 1.3;
+  }
+}
 
+/* slider & banners */
 .custom-btn {
   border: 3px solid #efe0e0 !important;
   transition: all 0.3s ease;
@@ -47,13 +55,12 @@
   background-color: transparent !important;
 }
 
-
 .hero-slider {
   position: relative;
   overflow: hidden;
 }
 
-/* BOTH */
+/* BOTH NAVIGATION ARROWS */
 .carousel-control-prev,
 .carousel-control-next {
   width: 8%;
@@ -61,29 +68,27 @@
   transition: all 0.4s ease;
 }
 
-/* LEFT */
 .carousel-control-prev {
-  transform: translateX(-40px);
+  transform: translateX(-10px);
 }
 
-/* RIGHT */
 .carousel-control-next {
-  transform: translateX(40px);
+  transform: translateX(10px);
 }
 
-/* SHOW ON HOVER */
 .hero-slider:hover .carousel-control-prev,
 .hero-slider:hover .carousel-control-next {
   opacity: 1;
   transform: translateX(0);
 }
 
-/* ICON */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   border-radius: 50%;
   background-color: #1e3913;
-  background-size: 26px;
+  background-size: 20px;
+  width: 40px;
+  height: 40px;
 }
 
 .carousel-indicators button {
@@ -99,41 +104,42 @@
   background-color: #f9321b !important;
 }
 
-/* text */
-.bg-green{
+/* Background Adjustments - Changed fixed heights to min-heights for safety */
+.bg-green {
   width: 100%;
-  height: 70px;
-  padding-top: 20px;
-  
+  min-height: 70px;
+  padding: 20px 0;
   background-color: #0e3910;
 }
+
 .dark-green {
   width: 100%;
-  height: 250px;
- background-color: #121f13;
+  min-height: 250px;
+  padding: 40px 0;
+  background-color: #121f13;
 }
 
-
-/* Focus */
+/* Focus Scale Zoom Effects */
 .image-hover {
   transition: transform 0.5s ease;
 }
 
 .image-hover:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
-
-/* Events */
+/* Events layout styling */
 .custom-border {
   border: 1px solid #9ea59e;
   border-radius: 10px;
+  transition: all 0.3s ease;
 }
+
 .custom-border:hover {
-  border:1px solid transparent;
-  box-shadow: 0 0 10px rgba(30, 57, 19, 0.5);
- 
+  border: 1px solid transparent;
+  box-shadow: 0 10px 20px rgba(30, 57, 19, 0.15);
 }
+
 .carousel-controls .carousel-control-prev,
 .carousel-controls .carousel-control-next {
   opacity: 0;
@@ -144,11 +150,11 @@
 .container:hover .carousel-controls .carousel-control-next {
   opacity: 1;
 } 
+
 .carousel-indicators.custom-indicators button {
   width: 10px !important;
   height: 10px !important;
   border-radius: 50%;
-
   background-color: #ccc !important;
   border: none;
   margin: 20px 6px;
@@ -158,10 +164,19 @@
 .carousel-indicators.custom-indicators .active {
   background-color: #198754 !important;
 } 
-.button{
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   height: 40px;
-  padding: 5px 4px;
+  padding: 5px 15px;
   border: 1px solid gray;
   border-radius: 9px;
+  background: white;
+  transition: background 0.2s;
 }
- 
+
+.button:hover {
+  background: #f5f5f5;
+}
