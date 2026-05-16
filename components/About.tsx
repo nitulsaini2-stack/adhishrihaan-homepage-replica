@@ -31,26 +31,28 @@ export default function WhatWeDo() {
     >
       <div className="container">
         {/* Heading Section */}
-        <div className="row justify-content-end mb-5">
-          <div className="col-12 col-md-10 col-lg-7 text-start text-md-end">
-            <h1
+        <div className="row ">
+          <div className="col-12 col-md-10 col-lg-7  text-md-end">
+            <h2
               className="display-4"
               style={{
-                fontWeight: "900",
+                // marginLeft: "200px",
+                fontSize: "50px",
+                fontWeight: "600",
                 color: "#213d1f",
                 letterSpacing: "-1px",
               }}
             >
               WHAT WE DO
-            </h1>
+            </h2>
             <p
               style={{
                 fontSize: "18px",
-                fontWeight: "700",
-                color: "#e65100", // Soft vibrant accent contrast to the dark green
+                fontWeight: "400",
+                color: "#0c1409", // Soft vibrant accent contrast to the dark green
                 textTransform: "uppercase",
                 letterSpacing: "2px",
-                marginTop: "5px",
+                // marginTop: "2px",
               }}
             >
               OUR PILLARS OF SUPPORT
